@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neelu's ఇంటి రుచులు</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8f9fa, #e2e2e2);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff9800, #ffc107);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff5722;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        .product-list {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        #products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            padding: 15px;
+            border-radius: 15px;
+            border: 3px solid #ffc107;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.1);
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .product .heading {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .product .caption {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #555;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .product .description {
+            margin-top: 10px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #ff9800, #ffc107);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 5px solid #ff5722;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 0.8rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            border-bottom: 2px solid white;
+            color: #ffeb3b;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffeb3b;
+        }
+
+        .product .price {
+            font-size: 1.3rem;
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                padding: 10px;
+            }
+
+            .product img {
+                max-height: 200px;
+                object-fit: cover;
+            }
+
+            .product .heading, .product .caption, .product .description {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neelu's ఇంటి రుచులు🍯🥜🙏</h1>
+    </header>
+
+    <section class="product-list">
+        <h2>Our Products List</h2>
+        <p>These are the goods and services which are made from farm to home:</p>
+        <div id="products">
+            <!-- Products will be injected here by JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Thank you for contacting Neelu’s ఇంటి రుచులు🍯🥜🙏</p>
+        <p>Phone: <a href="tel:+91 6305506754">+91 63055 06754</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+916305506754" target="_blank" rel="noopener noreferrer">+91 63055 06754</a></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.youtube.com/youryoutubechannel" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+                {
+                    name: "Groundnut Oil",
+                    price: "359/- Per Litre",
+                    description: "Pure and natural groundnut oil, perfect for cooking and frying. Rich in flavor and high in nutrients.",
+                    imageUrl: "groundnut-oil.jpg",
+                    caption: "High-Quality Groundnut Oil"
+                },
+                {
+                    name: "Sesame Oil",
+                    price: "430/- Per Litre",
+                    description: "Sesame oil with a rich, nutty flavor. Ideal for stir-frying and as a finishing oil for various dishes.",
+                    imageUrl: "sesame-oil.jpg",
+                    caption: "Premium Sesame Oil"
+                },
+                {
+                    name: "Honey",
+                    price: "700/- Per KG",
+                    description: "100% pure honey, harvested from our hives. Naturally sweet and perfect for tea or as a sugar substitute.",
+                    imageUrl: "honey.jpg",
+                    caption: "Pure Organic Honey"
+                },
+                {
+                    name: "Cow Ghee",
+                    price: "1500/- Per Litre",
+                    description: "Traditional cow ghee made from fresh cream. A staple for Indian cooking, adding a rich, buttery taste.",
+                    imageUrl: "cow-ghee.jpg",
+                    caption: "Authentic Cow Ghee"
+                },
+                {
+                    name: "Buffalo Ghee",
+                    price: "1300/- Per Litre",
+                    description: "Rich and creamy buffalo ghee, ideal for cooking and enhancing the flavor of your dishes.",
+                    imageUrl: "buffalo-ghee.jpg",
+                    caption: "Delicious Buffalo Ghee"
+                }
+            ];
+
+            const productsList = document.getElementById("products");
+
+            products.forEach((product) => {
+                const productDiv = document.createElement("div");
+                productDiv.className = "product";
+                productDiv.innerHTML = `
+                    <div class="heading">${product.name}</div>
+                    <img src="${product.imageUrl}" alt="${product.name}">
+                    <div class="caption">${product.caption}</div>
+                    <div class="price">${product.price}</div>
+                    <div class="description">${product.description}</div>
+                `;
+                productsList.appendChild(productDiv);
+            });
+        });
+    </script>
+</body>
+</html>
